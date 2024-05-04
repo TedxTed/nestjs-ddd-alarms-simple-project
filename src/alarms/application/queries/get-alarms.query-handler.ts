@@ -9,7 +9,7 @@ export class GetAlarmsQueryHandler
 {
   constructor(private readonly alarmRepository: FindAlarmsRepository) {}
 
-  async execute(query: GetAlarmsQuery): Promise<AlarmReadModel[]> {
+  async execute(_query: GetAlarmsQuery): Promise<AlarmReadModel[]> {
     return this.alarmRepository.findAll();
   }
 }

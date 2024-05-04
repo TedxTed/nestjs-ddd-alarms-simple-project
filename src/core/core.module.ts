@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ApplicationBootstrapOptions } from 'src/common/interfaces/application-bootstrap-options.interface';
-import {MongooseModule} from '@nestjs/mongoose'
-
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({})
 export class CoreModule {

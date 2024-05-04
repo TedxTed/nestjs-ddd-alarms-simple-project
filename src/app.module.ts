@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AlarmsModule } from './alarms/application/alarms.module'; 
+import { AlarmsModule } from './alarms/application/alarms.module';
 import { AlarmsInfrastructureModule } from './alarms/infrastructure/alarms-infrastructure.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -8,12 +8,13 @@ import { CoreModule } from './core/core.module';
 import { CqrsModule } from '@nestjs/cqrs';
 
 @Module({
-  imports: [CqrsModule.forRoot() ,CoreModule],
+  imports: [CqrsModule.forRoot(), CoreModule],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {
-  static register(options: ApplicationBootstrapOptions) { // 👈 new method
+  static register(options: ApplicationBootstrapOptions) {
+    // 👈 new method
     return {
       module: AppModule,
       imports: [

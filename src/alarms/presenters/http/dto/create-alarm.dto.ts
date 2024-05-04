@@ -3,7 +3,7 @@ export class CreateAlarmDto {
   severity: string;
   triggeredAt: Date;
   items: Array<{
-    name: string
-    type: string
-  }>
+    name: string;
+    type: string;
+  }>;
 }
